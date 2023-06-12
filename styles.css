@@ -93,6 +93,10 @@ header .main-nav .nav-list .sub-nav-heading:hover + .sub-nav {
 .hero .hero-img-desktop {
   width: 100%;
 }
+.hero .hero-img-mobile {
+  display: none;
+  width: 100%;
+}
 .hero .hero-text {
   position: absolute;
   top: 40%;
@@ -354,4 +358,104 @@ footer .footer-text img {
 }
 footer .footer-text .language {
   margin-left: auto;
+}
+
+/* desktop first */
+
+/*  these styles in the media query below will apply to screens below 1020px width (screens whose maximum width is 1020px) */
+
+@media screen and (max-width: 1020px) {
+  header .main-nav .nav-list {
+    display: none;
+  }
+  header .main-nav .humbugger-menu span {
+    width: 25px;
+    border-radius: 3px;
+    height: 3px;
+    margin: 3px;
+  }
+  .hero .hero-text {
+    top: 20%;
+  }
+  .featured .games > a {
+    width: 45%;
+  }
+  .updates .updates-container .update {
+    width: 45%;
+  }
+  .updates .update-nav {
+    flex-wrap: wrap;
+  }
+  footer .quick-links,
+  footer .footer-text {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cta .main-cta-text {
+    padding: 0 20px;
+  }
+  .updates .update-nav {
+    padding: 0 20px;
+  }
+  .updates .updates-container {
+    padding: 0 20px;
+  }
+  .cta .additional-text {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  .featured .games {
+    padding: 0 20px;
+  }
+
+  .cta .main-cta-text p {
+    max-width: unset;
+  }
+  .cta .additional-text p {
+    max-width: unset;
+    margin-top: 16px;
+  }
+  .hero .hero-img-desktop {
+    display: none;
+  }
+  .hero .hero-img-mobile {
+    display: block;
+  }
+  .hero .hero-text {
+    top: unset;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(70, 167, 223);
+    padding: 20px 20px 30px 20px;
+  }
+  .hero .hero-text h1 {
+    font-size: 25px;
+  }
+  .hero .hero-text p {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+  .hero .hero-text a {
+    padding: 8px 11px;
+  }
+  .featured .games > a {
+    width: 95%;
+  }
+  .updates .updates-container .update {
+    width: 95%;
+  }
+  footer .quick-links {
+    padding: 20px;
+  }
+  footer .quick-links ul {
+    flex-wrap: wrap;
+  }
+  footer .footer-text {
+    padding: 20px;
+  }
 }
